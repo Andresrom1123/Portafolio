@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <SelectedLanguage />
-    {{ $t('w-the-masculine') }}
+    <Banner />
   </div>
 </template>
 
 <script>
-import SelectedLanguage from './components/selectedLanguage.vue'
+import Banner from './components/Banner/Banner.vue'
 
 export default {
   name: 'App',
   components: {
-    SelectedLanguage
+    Banner
   }
 }
 </script>
 <style>
   @import './assets/styles/styles.css';
+  @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap');
 </style>

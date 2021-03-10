@@ -1,3 +1,45 @@
+* {
+  font-family: 'Shippori Mincho', serif;
+}
 .-pointer {
   cursor: pointer;
+}
+.-banner {
+  min-height: 100vh;
+  background-image: url("../images/banner/1.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.-content-banner {
+  height: 500px;
+}
+.-rotate-a {
+  transform: rotate(-90deg);
+}
+.-rotate-t {
+  transform: rotate(90deg);
+}
+.-link-h:hover {
+  color: white!important;
+  font-size: 0.9rem;
+}
+.-link-f:focus {
+  color: white!important;
+}
+.-overlay {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgb(0 0 0 / 74%);
+}
+.-z-index {
+  z-index: 9;
+}
+.-space {
+  letter-spacing: 2px;
+}
+.-fs-7 {
+  font-size: 0.8rem;
 }

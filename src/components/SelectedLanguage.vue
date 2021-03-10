@@ -1,8 +1,8 @@
 <template>
-  <div class="d-flex">
+  <div class="d-flex col-1 -z-index">
     <p
       class="-pointer"
-      :class="lang === 'en' ? 'text-muted' : ''"
+      :class="lang === 'en' ? 'text-muted' : 'text-white'"
       @click="handleChange('es')"
     >
       Es
@@ -10,7 +10,7 @@
     <i style="font-size: 0.1rem" class="pt-2 text-muted mx-2 fas fa-circle"></i>
     <p
       class="-pointer"
-      :class="lang === 'es' ? 'text-muted' : ''"
+      :class="lang === 'es' ? 'text-muted' : 'text-white'"
       @click="handleChange('en')"
     >
       En
@@ -19,6 +19,7 @@
 </template>
 <script>
 export default {
+  name: 'selectedLanguage',
   data() {
     const lang = localStorage.getItem('lang') || 'es'
     return {

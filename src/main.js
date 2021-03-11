@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import i18n from './i18n.js'
+import { BootstrapVue } from 'bootstrap-vue'
 
 // const lang = localStorage.getItem('lang') || 'es'
 
-
+Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex col-1 -z-index">
+  <div class="d-flex col-1">
     <p
       class="-pointer"
       :class="lang === 'en' ? 'text-muted' : 'text-white'"

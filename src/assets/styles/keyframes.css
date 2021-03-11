@@ -1,0 +1,87 @@
+.-animation-1 {
+  animation: animationName 2s forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+.-animation-2 {
+  animation: animationTittle 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
+}
+.-animation-3 {
+  animation: animationP 2s forwards;
+  animation-delay: 3.8s;
+  opacity: 0;
+}
+
+@keyframes animationName {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animationTittle {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animationP {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.-animation-4 {
+  animation: animationAbout 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
+}
+
+.-animation-5 {
+  animation: animationName2 2s forwards;
+  animation-delay: 2s;
+  opacity: 1;
+}
+
+@keyframes animationAbout {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animationName2 {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

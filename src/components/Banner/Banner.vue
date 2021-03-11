@@ -30,7 +30,7 @@
       <div class="-content-banner d-flex">
         <div class="col-1 text-muted -pointer d-flex align-items-center">
           <p
-            class="-rotate-a -animation-3 -fs-7 -link-h"
+            class="-rotate -animation-3 -fs-7 -link-h"
             @click="modalAbout = !modalAbout"
           >
             {{ !modalAbout ? $t('about') : $t('close') }}
@@ -59,7 +59,11 @@
           </div>
         </div>
         <div class="col-1 text-muted -pointer d-flex align-items-center">
-          <p class="-rotate-t -animation-3 -fs-7 -link-h">
+          <p
+            class="-rotate -animation-3 -fs-7 -link-h"
+            v-clipboard:copy="'amclres@gmail.com'"
+            @click="copied"
+          >
             amclres@gmail.com
           </p>
         </div>
@@ -80,6 +84,11 @@ export default {
   data() {
     return {
       modalAbout: false
+    }
+  },
+  methods: {
+    copied() {
+      alert(this.$t('copied'))
     }
   }
 }

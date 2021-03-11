@@ -16,11 +16,8 @@
 .-content-banner {
   height: 500px;
 }
-.-rotate-a {
+.-rotate {
   transform: rotate(-90deg);
-}
-.-rotate-t {
-  transform: rotate(90deg);
 }
 .-link-h:hover {
   color: white!important;

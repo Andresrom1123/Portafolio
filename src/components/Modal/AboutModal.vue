@@ -1,5 +1,5 @@
 <template>
-  <div v-if="modalAbout">
+  <div v-if="aboutModal">
     <div class="mb-3 p-4 -animation-4">
       <p class="fs-2 text-white mb-3">
         {{ $t('about-description' )}}
@@ -43,9 +43,9 @@
 
 <script>
 export default {
-  name: 'ModalAbout',
+  name: 'AboutModal',
   props: {
-    modalAbout: {
+    aboutModal: {
       type: Boolean,
       default: false
     }

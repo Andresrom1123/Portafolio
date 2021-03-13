@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex col-1">
+  <div class="d-flex">
     <p
       class="-pointer"
       :class="lang === 'en' ? 'text-muted' : 'text-white'"
@@ -19,7 +19,7 @@
 </template>
 <script>
 export default {
-  name: 'selectedLanguage',
+  name: 'LanguageSelected',
   data() {
     const lang = localStorage.getItem('lang') || 'es'
     return {

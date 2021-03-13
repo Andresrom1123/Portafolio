@@ -2,48 +2,54 @@
   <div class="-banner">
     <div class="position-absolute -overlay"></div>
     <div class="mx-3 py-5">
-      <div
-        class="d-flex"
-        :class="modalAbout ? 'justify-content-end pe-5' : ''"
-      >
+      <div class="d-flex justify-content-end pe-4">
         <div
-          v-if="!modalAbout"
-          class="col-11 p-1 text-center -animation-3 -z-index"
+          class="col-1 d-md-none d-block -z-index -animation-3"
         >
-          <a
-            class="text-muted -fs-7 -link-h -link-f text-decoration-none me-3"
-            href="#"
-          >
-            {{  $t('projects')}}
-          </a>
-          <a
-            class="text-muted -fs-7 -link-h -link-f text-decoration-none"
-            href="#"
-          >
-            {{ $t('practices') }}
-          </a>
+          <div @click="burguerModal = !burguerModal">
+            <header-burguer />
+          </div>
         </div>
-        <div class="-animation-3 -z-index">
-          <selected-language />
+        <div
+          v-if="!aboutModal"
+          class="col-10 p-1 text-center -animation-3 -z-index d-none d-md-block"
+        >
+          <Header />
+        </div>
+        <div
+          class="
+            d-flex -animation-3 col-10 justify-content-md-start justify-content-end col-md-1 -z-index
+          "
+        >
+          <language-selected />
         </div>
       </div>
       <div class="-content-banner d-flex">
-        <div class="col-1 text-muted -pointer d-flex align-items-center">
+        <div
+          class="
+            col-1 text-muted -pointer d-md-flex d-none justify-content-center align-items-center flex-column
+          "
+        >
           <p
             class="-rotate -animation-3 -fs-7 -link-h"
-            @click="modalAbout = !modalAbout"
+            @click="aboutModal = !aboutModal"
           >
-            {{ !modalAbout ? $t('about') : $t('close') }}
+            {{ !aboutModal ? $t('about') : $t('close') }}
           </p>
         </div>
-        <div v-if="modalAbout" class="col-10 -z-index">
-          <modal-about :modalAbout="modalAbout" />
+        <div v-if="aboutModal" class="col-10 -z-index">
+          <about-modal :aboutModal="aboutModal" />
         </div>
         <div
-          v-if="!modalAbout"
-          class="col-10 d-flex flex-wrap justify-content-center align-items-center"
+          v-if="!aboutModal"
+          class="
+            col-md-10 col-12 d-flex flex-wrap justify-content-center align-items-center
+          "
         >
-          <div class="text-white text-center -z-index">
+          <div
+            class="text-white text-center -z-index"
+            :class="burguerModal ? 'd-none' : ''"
+          >
             <h1 class="fs-1 -space -animation-1">
               Andrés Romero
             </h1>
@@ -51,44 +57,47 @@
               {{ $t('tittle') }}
             </p>
           </div>
-          <div class="align-self-end position-absolute -animation-3">
+          <div
+            class="align-self-end position-absolute -animation-3"
+            :class="burguerModal ? 'd-none' : ''"
+          >
             <i
               class="text-muted -link-h -pointer fas fa-long-arrow-alt-down"
             >
             </i>
           </div>
         </div>
-        <div class="col-1 text-muted -pointer d-flex align-items-center">
-          <p
-            class="-rotate -animation-3 -fs-7 -link-h"
-            v-clipboard:copy="'amclres@gmail.com'"
-            @click="copied"
-          >
-            amclres@gmail.com
-          </p>
+        <div
+          class="
+            col-1 text-muted -pointer flex-column d-md-flex d-none align-items-center justify-content-center
+          "
+        >
+          <email-copied />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import SelectedLanguage from '../SelectedLanguage'
-import ModalAbout from '../Modal/ModalAbout'
+import LanguageSelected from '../LanguageSelected'
+import AboutModal from '../Modal/AboutModal'
+import Header from '../Header/Header'
+import HeaderBurguer from '../Header/HeaderBurguer'
+import EmailCopied from '../EmailCopied.vue'
 
 export default {
   name: 'Banner',
   components: {
-    SelectedLanguage,
-    ModalAbout
+    LanguageSelected,
+    AboutModal,
+    Header,
+    HeaderBurguer,
+    EmailCopied
   },
   data() {
     return {
-      modalAbout: false
-    }
-  },
-  methods: {
-    copied() {
-      alert(this.$t('copied'))
+      aboutModal: false,
+      burguerModal: false
     }
   }
 }

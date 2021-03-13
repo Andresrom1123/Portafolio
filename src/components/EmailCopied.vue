@@ -1,6 +1,6 @@
 <template>
   <p
-    class="-rotate -animation-3 -fs-7 -link-h"
+    class="-animation-3 -fs-7 -link-h -pointer"
     v-clipboard:copy="'amclres@gmail.com'"
     @click="copied"
   >

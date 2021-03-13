@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <div>
     <a
       class="text-muted -fs-7 -link-h -link-f text-decoration-none me-3"
       href="#"
@@ -12,7 +12,7 @@
     >
       {{ $t('practices') }}
     </a>
-  </header>
+  </div>
 </template>
 <script>
 export default {

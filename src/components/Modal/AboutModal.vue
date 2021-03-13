@@ -1,5 +1,5 @@
 <template>
-  <div v-if="aboutModal">
+  <div v-if="aboutModal" class="col-10 -z-index">
     <div class="mb-3 p-4 -animation-4">
       <p class="fs-2 text-white mb-3">
         {{ $t('about-description' )}}

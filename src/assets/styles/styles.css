@@ -26,6 +26,9 @@
 .-link-f:focus {
   color: white!important;
 }
+.-link:hover {
+  color: white!important;
+}
 .-overlay {
   top: 0;
   bottom: 0;

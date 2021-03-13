@@ -1,10 +1,10 @@
 <template>
   <div class="-banner">
     <div class="position-absolute -overlay"></div>
-    <div class="mx-3 py-5">
-      <div class="d-flex justify-content-end pe-4">
+    <div class="mx-3 pt-5">
+      <header class="d-flex justify-content-end pe-4">
         <div
-          class="col-1 d-md-none d-block -z-index -animation-3"
+          class="col-1 d-md-none d-block -z-index"
         >
           <div @click="burguerModal = !burguerModal">
             <header-burguer />
@@ -23,7 +23,7 @@
         >
           <language-selected />
         </div>
-      </div>
+      </header>
       <div class="-content-banner d-flex">
         <div
           class="
@@ -37,19 +37,15 @@
             {{ !aboutModal ? $t('about') : $t('close') }}
           </p>
         </div>
-        <div v-if="aboutModal" class="col-10 -z-index">
-          <about-modal :aboutModal="aboutModal" />
-        </div>
+        <about-modal :aboutModal="aboutModal" />
+        <burguer-modal :burguerModal="burguerModal" />
         <div
-          v-if="!aboutModal"
+          v-if="!aboutModal & !burguerModal"
           class="
-            col-md-10 col-12 d-flex flex-wrap justify-content-center align-items-center
+            col-md-10 col-12 d-flex justify-content-center align-items-center
           "
         >
-          <div
-            class="text-white text-center -z-index"
-            :class="burguerModal ? 'd-none' : ''"
-          >
+          <div class="text-white text-center -z-index">
             <h1 class="fs-1 -space -animation-1">
               Andrés Romero
             </h1>
@@ -57,10 +53,7 @@
               {{ $t('tittle') }}
             </p>
           </div>
-          <div
-            class="align-self-end position-absolute -animation-3"
-            :class="burguerModal ? 'd-none' : ''"
-          >
+          <div class="align-self-end position-absolute -animation-3">
             <i
               class="text-muted -link-h -pointer fas fa-long-arrow-alt-down"
             >
@@ -69,10 +62,12 @@
         </div>
         <div
           class="
-            col-1 text-muted -pointer flex-column d-md-flex d-none align-items-center justify-content-center
+            col-1 text-muted flex-column d-md-flex d-none align-items-center justify-content-center
           "
         >
-          <email-copied />
+          <div class="-rotate">
+            <email-copied />
+          </div>
         </div>
       </div>
     </div>
@@ -84,6 +79,7 @@ import AboutModal from '../Modal/AboutModal'
 import Header from '../Header/Header'
 import HeaderBurguer from '../Header/HeaderBurguer'
 import EmailCopied from '../EmailCopied.vue'
+import BurguerModal from '../Modal/BurguerModal.vue'
 
 export default {
   name: 'Banner',
@@ -92,7 +88,8 @@ export default {
     AboutModal,
     Header,
     HeaderBurguer,
-    EmailCopied
+    EmailCopied,
+    BurguerModal
   },
   data() {
     return {

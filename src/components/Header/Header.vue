@@ -2,9 +2,9 @@
   <div>
     <a
       class="text-muted -fs-7 -link-h -link-f text-decoration-none me-3"
-      href="#"
+      href="#projects"
     >
-      {{  $t('projects')}}
+      {{  $t('projects') }}
     </a>
     <a
       class="text-muted -fs-7 -link-h -link-f text-decoration-none"

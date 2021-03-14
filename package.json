@@ -14,7 +14,8 @@
     "i18n": "^0.13.2",
     "vue": "^2.6.12",
     "vue-clipboard2": "^0.3.1",
-    "vue-i18n": "^8.24.0"
+    "vue-i18n": "^8.24.0",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

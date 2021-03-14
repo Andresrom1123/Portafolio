@@ -3,9 +3,8 @@
 * {
   font-family: 'Shippori Mincho', serif;
 }
-.-pointer {
-  cursor: pointer;
-}
+
+/* Banner */
 .-banner {
   min-height: 100vh;
   background-image: url("../images/banner/1.jpg");
@@ -16,18 +15,10 @@
 .-content-banner {
   height: 500px;
 }
+
+/* utils */
 .-rotate {
   transform: rotate(-90deg);
-}
-.-link-h:hover {
-  color: white!important;
-  font-size: 0.9rem;
-}
-.-link-f:focus {
-  color: white!important;
-}
-.-link:hover {
-  color: white!important;
 }
 .-overlay {
   top: 0;
@@ -44,4 +35,32 @@
 }
 .-fs-7 {
   font-size: 0.8rem;
+}
+.-pointer {
+  cursor: pointer;
+}
+
+/* scroll */
+::-webkit-scrollbar{
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background-color:#fff;
+  border-radius: 5px; 
+} 
+::-webkit-scrollbar-thumb {
+  background-color:  rgba(204, 204, 204, 0.7);
+  border-radius: 5px;
+}
+
+/* hover */
+.-link-h:hover {
+  color: white!important;
+  font-size: 0.9rem;
+}
+.-link-f:focus {
+  color: white!important;
+}
+.-link:hover {
+  color: white!important;
 }

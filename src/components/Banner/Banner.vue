@@ -53,12 +53,15 @@
               {{ $t('tittle') }}
             </p>
           </div>
-          <div class="align-self-end position-absolute -animation-3">
+          <a
+            class="align-self-end position-absolute -animation-3"
+            :href="'#' + $t('projects')"
+          >
             <i
               class="text-muted -link-h -pointer fas fa-long-arrow-alt-down"
             >
             </i>
-          </div>
+          </a>
         </div>
         <div
           class="

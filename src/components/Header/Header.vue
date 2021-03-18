@@ -2,13 +2,13 @@
   <div>
     <a
       class="text-muted -fs-7 -link-h -link-f text-decoration-none me-3"
-      href="#projects"
+      :href="'#' + $t('projects')"
     >
       {{  $t('projects') }}
     </a>
     <a
       class="text-muted -fs-7 -link-h -link-f text-decoration-none"
-      href="#"
+      :href="'#' + $t('practices')"
     >
       {{ $t('practices') }}
     </a>

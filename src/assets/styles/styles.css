@@ -12,6 +12,7 @@
 .-card img {
   max-height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 /* Banner */
@@ -80,4 +81,11 @@
 }
 .-link:hover {
   color: white!important;
+}
+
+/* Media */
+@media (min-width: 768px) { 
+  .-fs-md-1 {
+    font-size: 2.5rem!important;
+  }
 }

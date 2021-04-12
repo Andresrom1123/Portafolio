@@ -10,7 +10,7 @@
     <div
       class="-overlay -opacity position-absolute d-flex justify-content-center align-items-center"
     >
-      <p class="text-white fs-1 -z-index">
+      <p class="text-white fs-6 -fs-md-1 -z-index">
         Titulo del proyecto
       </p>
     </div>

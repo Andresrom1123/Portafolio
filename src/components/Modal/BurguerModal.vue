@@ -3,7 +3,7 @@
     <div class="col-4 me-2 -animation-4">
       <div class="mb-3">
         <a
-          href=""
+          :href="'#' + $t('projects')"
           class="text-muted -link-h -fs-7 text-decoration-none"
         >
           {{ $t('projects' )}}
@@ -11,7 +11,7 @@
       </div>
       <div>
         <a
-          href=""
+          :href="'#' + $t('practices')"
           class="text-muted -link-h -fs-7 text-decoration-none"
         >
           {{ $t('practices' )}}

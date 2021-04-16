@@ -3,7 +3,7 @@
     <div class="col-4 me-2 -animation-4">
       <div class="mb-3">
         <a
-          :href="'#' + $t('projects')"
+          :href="'#' + $t('projects').replace(/\b\w/g, l => l.toLowerCase())"
           class="text-muted -link-h -fs-7 text-decoration-none"
         >
           {{ $t('projects' )}}
@@ -11,7 +11,7 @@
       </div>
       <div>
         <a
-          :href="'#' + $t('practices')"
+          :href="'#' + $t('practices').replace(/\b\w/g, l => l.toLowerCase())"
           class="text-muted -link-h -fs-7 text-decoration-none"
         >
           {{ $t('practices' )}}

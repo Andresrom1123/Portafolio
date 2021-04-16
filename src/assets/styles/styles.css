@@ -18,6 +18,8 @@
 /* Banner */
 .-banner {
   min-height: 100vh;
+}
+.-img-banner {
   background-image: url("../../../public/images/banner/1.jpg");
   background-position: center;
   background-size: 100% 100%;
@@ -51,8 +53,14 @@
 .-fs-7 {
   font-size: 0.8rem;
 }
+.-fs-7rem {
+  font-size: 7rem;
+}
 .-pointer {
   cursor: pointer;
+}
+.-mt-6 {
+  margin-top: 6rem;
 }
 
 /* scroll */

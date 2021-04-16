@@ -1,5 +1,5 @@
 <template>
-  <div class="-banner">
+  <div class="-banner -img-banner">
     <div class="position-absolute -overlay"></div>
     <div class="mx-3 pt-5">
       <header class="d-flex justify-content-end pe-4">
@@ -55,7 +55,7 @@
           </div>
           <a
             class="align-self-end position-absolute -animation-3"
-            :href="'#' + $t('projects')"
+            :href="'#' + $t('projects').replace(/\b\w/g, l => l.toLowerCase())"
           >
             <i
               class="text-muted -link-h -pointer fas fa-long-arrow-alt-down"

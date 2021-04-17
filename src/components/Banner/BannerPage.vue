@@ -14,7 +14,7 @@
       <div class="-content-banner d-flex justify-content-center p-5">
         <div>
           <div v-if="!details">
-            <h1 class="-fs-7rem pt-5 mb-4">
+            <h1 class="-fs-md-7rem fs-1 pt-5 mb-4">
               {{ name.replace(/\b\w/g, l => l.toUpperCase()) }}
             </h1>
             <div class="d-flex justify-content-center">
@@ -24,7 +24,7 @@
             </div>
           </div>
           <div v-if="details">
-            <details-modal />
+            <details-modal :data="detailsData[0]" />
             <div class="d-flex justify-content-center">
               <i
                 class="far fa-times-circle -pointer fs-4 text-muted"
@@ -35,7 +35,7 @@
           </div>
           <a class="text-center -mt-6 mb-0 d-block" :href="'#'">
             <i
-              class="text-muted -link-h -pointer fas fa-long-arrow-alt-down"
+              class="text-muted -pointer fas fa-long-arrow-alt-down"
             >
             </i>
           </a>
@@ -47,6 +47,7 @@
 <script>
 import LanguageSelected from '../LanguageSelected'
 import DetailsModal from '../Modal/DetailsModal'
+import DetailsData from '../../data/details'
 
 export default {
   name: 'BannerPage',
@@ -57,8 +58,14 @@ export default {
   data() {
     return {
       name: this.$route.params.name.replace('_', " "),
-      details: false
+      details: false,
+      detailsData: null
     }
+  },
+  mounted() {
+    this.detailsData = DetailsData.filter((detail) => {
+      return detail.name === this.$route.params.name
+    })
   }
 }
 </script>

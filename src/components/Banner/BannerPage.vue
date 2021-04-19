@@ -33,7 +33,7 @@
               </i>
             </div>
           </div>
-          <a class="text-center -mt-6 mb-0 d-block" :href="'#'">
+          <a class="text-center -mt-6 mb-0 d-block" :href="'#' + $t('content')">
             <i
               class="text-muted -pointer fas fa-long-arrow-alt-down"
             >

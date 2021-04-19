@@ -17,5 +17,6 @@
   "intro_newsletters": "Interfaz para que los usuarios puedan suscribirse al boletín de su preferencia, también podrán votar para que se agreguen nuevos boletines",
   "intro_expert-answers": "Una red social de preguntas y respuestas que en un primer contacto te hace recordar a Yahoo! Respuestas",
   "intro_netflix-banner": "Clon de un banner de la casa de papel, realizado solamente con html, css y bootstrap",
-  "intro_trello-card": "Practica que simula las tarjetas de trello, tales como poner titulo, editar, poner tareas, etc.."
+  "intro_trello-card": "Practica que simula las tarjetas de trello, tales como poner titulo, editar, poner tareas, etc..",
+  "content": "contenido"
 }

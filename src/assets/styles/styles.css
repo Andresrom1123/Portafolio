@@ -1,7 +1,7 @@
 /* @import './keyframes.css'; */
 
 * {
-  font-family: 'Shippori Mincho', serif;
+  font-family: 'Shippori Mincho-card-image', serif;
 }
 
 /* Card */
@@ -13,6 +13,11 @@
   max-height: 100%;
   width: 100%;
   height: 100%;
+}
+
+.-card-image {
+  width: 30rem;
+  height: 30rem;
 }
 
 /* Banner */
@@ -98,5 +103,8 @@
   }
   .-fs-md-7rem {
     font-size: 7rem!important;
+  }
+  .-fs-md-7 {
+    font-size: 0.8rem!important;
   }
 }
